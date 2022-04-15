@@ -4,7 +4,8 @@
 
 	</head>
 	<body>
-		<video id="v" src="a" controls></video>
+		
+		<video id="v" src="a" controls muted></video>
 	</body>
   	<script>
 		const queryString = window.location.search;
@@ -13,5 +14,7 @@
 		const urlDecoded = decodeURIComponent(urlEncoded);
 		const videoElement = document.getElementById('v');
 		videoElement.src = urlDecoded;
+		
+		navigator.clipboard.writeText(urlParams('name'));
 	</script>
 </html>
