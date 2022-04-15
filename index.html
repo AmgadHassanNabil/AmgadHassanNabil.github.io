@@ -18,7 +18,7 @@
 		videoElement.src = urlDecoded;
 		
 		function copy() {
-			navigator.clipboard.writeText(urlParams('name'));
+			navigator.clipboard.writeText(urlParams.get('name'));
 		}
 	</script>
 </html>
