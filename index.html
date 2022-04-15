@@ -1,9 +1,17 @@
 <html lang="en">
 	<head>
 	  <meta charset="utf-8">
-	  <script>
-	  </script>
+
 	</head>
 	<body>
+		<video id="v" src="a" controls></video>
 	</body>
+  	<script>
+		const queryString = window.location.search;
+		const urlParams = new URLSearchParams(queryString);
+		const urlEncoded = urlParams.get('x');
+		const urlDecoded = decodeURIComponent(urlEncoded);
+		const videoElement = document.getElementById('v');
+		videoElement.src = urlDecoded;
+	</script>
 </html>
