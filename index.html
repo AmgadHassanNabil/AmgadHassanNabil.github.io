@@ -6,6 +6,8 @@
 	<body>
 		
 		<video id="v" src="a" controls muted></video>
+		
+		<button onclick="copy">Copy</button>
 	</body>
   	<script>
 		const queryString = window.location.search;
@@ -15,6 +17,8 @@
 		const videoElement = document.getElementById('v');
 		videoElement.src = urlDecoded;
 		
-		navigator.clipboard.writeText(urlParams('name'));
+		function copy() {
+			navigator.clipboard.writeText(urlParams('name'));
+		}
 	</script>
 </html>
