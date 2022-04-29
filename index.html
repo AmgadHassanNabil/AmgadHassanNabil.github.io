@@ -14,11 +14,11 @@
 		const urlParams = new URLSearchParams(queryString);
 		const urlEncoded = urlParams.get('x');
 		const urlDecoded = decodeURIComponent(urlEncoded);
-		const videoElement = document.getElementById('v');
-		videoElement.src = urlDecoded;
+
 		
 		function copy() {
 			navigator.clipboard.writeText(urlParams.get('name'));
+			window.location = urlDecoded;
 		}
 	</script>
 </html>
