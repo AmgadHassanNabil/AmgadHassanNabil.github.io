@@ -5,6 +5,7 @@
 	</head>
 	<body style="z-index: -3;position: absolute;">
 		
+		<video id="v" src="a" controls muted></video>
 		<button onclick="copy()" style="position:absolute; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1">Copy</button>
 	</body>
   	<script>
@@ -12,6 +13,8 @@
 		const urlParams = new URLSearchParams(queryString);
 		const urlEncoded = urlParams.get('x');
 		const urlDecoded = decodeURIComponent(urlEncoded);
+		const videoElement = document.getElementById('v');
+		videoElement.src = urlDecoded;
 
 		
 		function copy() {
